@@ -1,0 +1,9 @@
+#!/bin/sh
+
+[ ! -f .env ] || export $(grep -v '^#' .env | xargs)
+
+BUILD_FLAGS=--minify
+
+sshpass -p ${DHOUS_PASS} rsync -avz --delete site/ ${DHOUS_USER}@${DHOUS_HOST}:${DHOUS_DIR}
+
+exit 0

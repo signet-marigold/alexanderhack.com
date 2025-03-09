@@ -1,0 +1,6 @@
+ErrorDocument 404 /404.html
+
+Options -Indexes
+
+AddDefaultCharset UTF-8
+AddType text/plain .asc
